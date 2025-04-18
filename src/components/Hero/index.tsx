@@ -48,17 +48,19 @@ const Hero = () => {
         </div>
         {/* Heading */}
         <h1 className="font-playfair text-4xl font-semibold uppercase leading-tight tracking-wide text-white sm:text-6xl md:text-7xl">
-          choissisez l'élégance pour <br/> vos futurs événements
-        </h1>
-        {/* Subheading */}
-        <p className="font-lora mt-4 text-xl italic tracking-wider text-white">
-          Louer votre moment
-        </p>
+  choissisez l&apos;élégance pour <br /> vos futurs événements
+</h1>
 
-        {/* CTA Button */}
-        <button className="font-playfair  rounded-full bg-white px-6 py-3 font-semibold text-black transition hover:bg-gray-200">
-        réserver une voiture
-        </button>
+{/* Subheading */}
+<p className="font-lora mt-4 text-xl italic tracking-wider text-white">
+  Louer votre moment
+</p>
+
+{/* CTA Button */}
+<button className="font-playfair rounded-full bg-white px-6 py-3 font-semibold text-black transition hover:bg-gray-200">
+  réserver une voiture
+</button>
+
       </div>
 
       {/* Scroll Down Indicator */}
