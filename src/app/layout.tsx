@@ -11,6 +11,21 @@ import ToasterContext from "./api/contex/ToasetContex";
 import { useEffect, useState } from "react";
 import PreLoader from "@/components/Common/PreLoader";
 
+// 👇 Import Google Fonts using next/font
+import { Playfair_Display, Lora } from "next/font/google";
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["600", "700"],
+  variable: "--font-playfair",
+});
+
+const lora = Lora({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-lora",
+});
+
 export default function RootLayout({
   children,
 }: {
@@ -23,14 +38,13 @@ export default function RootLayout({
   }, []);
 
   return (
-    <html suppressHydrationWarning={true} className="!scroll-smooth" lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
+    <html
+      suppressHydrationWarning={true}
+      className={`${playfair.variable} ${lora.variable} !scroll-smooth`}
+      lang="en"
+    >
       <head />
-
-      <body>
+      <body className="font-sans">
         {loading ? (
           <PreLoader />
         ) : (
@@ -43,7 +57,7 @@ export default function RootLayout({
               <ToasterContext />
               <Header />
               {children}
-              <Footer />
+              {/* <Footer /> */}
               <ScrollToTop />
             </ThemeProvider>
           </SessionProvider>
